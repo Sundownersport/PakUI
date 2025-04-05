@@ -73,6 +73,38 @@ check_boxart_status() {
     return 0
 }
 
+# New function to delete all existing images in .res folders
+delete_existing_images() {
+    local scope="$1" # Can be "all" or a specific system directory
+    local count=0
+    
+    if [ "$scope" = "all" ]; then
+        # Delete images from all system .res folders
+        ./show_message "Delete ALL existing images?" -l -a "YES" -b "NO"
+        if [ $? -eq 0 ]; then
+            ./show_message "Deleting all images..." -t 1
+            find "/mnt/SDCARD/Roms" -mindepth 2 -type d -name ".res" -exec sh -c 'find "$1" -type f -name "*.png" -delete' sh {} \; 2>/dev/null
+            count=$(find "/mnt/SDCARD/Roms" -mindepth 2 -type d -name ".res" -exec sh -c 'ls -1 "$1"/*.png 2>/dev/null | wc -l' sh {} \; | awk '{s+=$1} END {print s}')
+            ./show_message "All images deleted!" -t 1
+            return 0
+        fi
+    else
+        # Delete images from a specific system's .res folder
+        local system_name=$(basename "$scope")
+        local clean_system_name=$(echo "$system_name" | sed -E 's/^[0-9]+[)\._ -]+//' | sed 's/ *([^)]*)//g')
+        
+        ./show_message "Delete all $clean_system_name images?" -l -a "YES" -b "NO"
+        if [ $? -eq 0 ]; then
+            ./show_message "Deleting $clean_system_name images..." -t 1
+            find "$scope/.res" -type f -name "*.png" -delete 2>/dev/null
+            ./show_message "All $clean_system_name images deleted!" -t 1
+            return 0
+        fi
+    fi
+    
+    return 1
+}
+
 check_connectivity() {
     ping -c 1 -W 2 8.8.8.8 >/dev/null 2>&1 ||
     ping -c 1 -W 2 1.1.1.1 >/dev/null 2>&1 ||
@@ -125,6 +157,7 @@ run_system_scraper() {
     fi
 }
 
+# Function to show overwrite options for an individual system
 select_system_to_scrape() {
     SYSTEM_LIST="/tmp/scraper_system_list.txt"
     > "$SYSTEM_LIST"
@@ -150,12 +183,64 @@ select_system_to_scrape() {
     selected_dir=$(echo "$selected" | cut -d'|' -f2)
     system_name=$(basename "$selected_dir")
     clean_system_name=$(echo "$system_name" | sed -E 's/^[0-9]+[)\._ -]+//' | sed 's/ *([^)]*)//g')
-    ./show_message "Scrape $clean_system_name?" -l -a "YES" -b "NO"
-    if [ $? -eq 0 ]; then
-        run_system_scraper "$selected_dir"
-        return $?
+    
+    # Add overwrite options menu
+    SCRAPE_OPTIONS="/tmp/scrape_options.txt"
+    > "$SCRAPE_OPTIONS"
+    echo "Scrape without overwriting|normal" >> "$SCRAPE_OPTIONS"
+    echo "Delete existing & scrape new|overwrite" >> "$SCRAPE_OPTIONS"
+    
+    scrape_choice=$(./game_picker "$SCRAPE_OPTIONS" -b "CANCEL" -t "Scrape $clean_system_name")
+    if [ $? -eq 0 ] && [ -n "$scrape_choice" ]; then
+        scrape_action=$(echo "$scrape_choice" | cut -d'|' -f2)
+        
+        case "$scrape_action" in
+            "normal")
+                run_system_scraper "$selected_dir"
+                return $?
+                ;;
+            "overwrite")
+                if delete_existing_images "$selected_dir"; then
+                    run_system_scraper "$selected_dir"
+                    return $?
+                fi
+                ;;
+        esac
     fi
+    
     return 1
+}
+
+# Modified function to show overwrite options for all systems
+scrape_all_systems() {
+    SCRAPE_OPTIONS="/tmp/scrape_options.txt"
+    > "$SCRAPE_OPTIONS"
+    echo "Scrape without overwriting|normal" >> "$SCRAPE_OPTIONS"
+    echo "Delete existing & scrape new|overwrite" >> "$SCRAPE_OPTIONS"
+    
+    scrape_choice=$(./game_picker "$SCRAPE_OPTIONS" -b "CANCEL" -t "Scrape All Systems")
+    if [ $? -eq 0 ] && [ -n "$scrape_choice" ]; then
+        scrape_action=$(echo "$scrape_choice" | cut -d'|' -f2)
+        
+        case "$scrape_action" in
+            "normal")
+                export SCRAPE_SINGLE_SYSTEM="0"
+                export USING_RESUME="0"
+                export ROMS_DIR="/mnt/SDCARD/Roms"
+                ./show_message "Scraping All Systems" -l -t 2
+                run_scraper
+                ;;
+            "overwrite")
+                if delete_existing_images "all"; then
+                    export SCRAPE_SINGLE_SYSTEM="0"
+                    export USING_RESUME="0"
+                    export ROMS_DIR="/mnt/SDCARD/Roms"
+                    ./show_message "Scraping All Systems" -l -t 2
+                    run_scraper
+                fi
+                ;;
+        esac
+    fi
 }
 
 check_resume_available() {
@@ -356,11 +441,7 @@ main() {
                 action=$(echo "$picker_output" | cut -d'|' -f2)
                 case "$action" in
                     "all")
-                        ./show_message "Scraping All Systems" -l -t 2
-                        export SCRAPE_SINGLE_SYSTEM="0"
-                        export USING_RESUME="0"
-                        export ROMS_DIR="/mnt/SDCARD/Roms"
-                        run_scraper
+                        scrape_all_systems
                         ;;
                     "system")
                         select_system_to_scrape
@@ -399,7 +480,7 @@ main() {
 }
 
 cleanup() {
-    rm -f "$SCRAPER_LIST" "$OPTIONS_LIST" "$REGIONS_LIST" "$HEIGHT_LIST" "$WIDTH_LIST"
+    rm -f "$SCRAPER_LIST" "$OPTIONS_LIST" "$REGIONS_LIST" "$HEIGHT_LIST" "$WIDTH_LIST" "/tmp/scrape_options.txt"
 }
 
 trap cleanup EXIT

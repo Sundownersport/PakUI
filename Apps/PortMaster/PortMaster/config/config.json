@@ -1,0 +1,14 @@
+{
+    "change_channel": false,
+    "disclaimer": true,
+    "featured_ports_checked": "2025-04-04T14:24:43.500776",
+    "first-run": false,
+    "porters_checked": "2025-04-04T14:24:44.641494",
+    "ports_info_checked": "2024-08-18T03:45:32.327937",
+    "release_channel": "stable",
+    "show_experimental": false,
+    "theme": "MinUI",
+    "theme-scheme": null,
+    "update_checked": "2025-04-04T14:24:42.606085",
+    "version": 2
+}

@@ -1,0 +1,693 @@
+current_mode 1024x768
+SDL_UDEV_DEVICEADDED 2 /dev/input/event1
+SDL_UDEV_DEVICEADDED 8 /dev/audio
+SDL_UDEV_DEVICEADDED 8 /dev/dsp
+SDL_UDEV_DEVICEADDED 2 /dev/input/event2
+SDL_UDEV_DEVICEADDED 8 /dev/mixer
+SDL_UDEV_DEVICEADDED 8 /dev/snd/pcmC0D0c
+SDL_UDEV_DEVICEADDED 8 /dev/snd/pcmC0D0p
+SDL_UDEV_DEVICEADDED 8 /dev/snd/controlC0
+SDL_UDEV_DEVICEADDED 2 /dev/input/event0
+SDL_UDEV_DEVICEADDED 6 /dev/input/event3
+SDL_UDEV_DEVICEADDED 6 /dev/input/js0
+SDL_UDEV_DEVICEADDED 8 /dev/snd/seq
+SDL_UDEV_DEVICEADDED 8 /dev/sequencer
+SDL_UDEV_DEVICEADDED 8 /dev/sequencer2
+SDL_UDEV_DEVICEADDED 8 /dev/snd/timer
+MALI_CreateWindow:0x55ba8e0910 done.
+2025-04-04 14:54:18.186 | DEBUG    | harbourmaster.config:<module>:151 - HM_DEFAULT_TOOLS_DIR:   /mnt/SDCARD/Apps/PortMaster
+2025-04-04 14:54:18.189 | DEBUG    | harbourmaster.config:<module>:152 - HM_DEFAULT_PORTS_DIR:   /mnt/SDCARD/Data/ports
+2025-04-04 14:54:18.190 | DEBUG    | harbourmaster.config:<module>:153 - HM_DEFAULT_SCRIPTS_DIR: /mnt/SDCARD/Data/ports
+2025-04-04 14:54:19.475 | INFO     | __main__:__init__:531 - PM: 2025.03.03-0141
+2025-04-04 14:54:19.484 | INFO     | __main__:__init__:532 - HM: 2024-02-27
+2025-04-04 14:54:19.490 | INFO     | __main__:__init__:533 - SDL DLL: /usr/trimui/lib/libSDL2-2.0.so.0.3000.8,  2.30.8
+2025-04-04 14:54:19.555 | INFO     | __main__:__init__:534 - TTF DLL: /usr/trimui/lib/libSDL2_ttf-2.0.so.0.14.1, 2.0.15
+2025-04-04 14:54:19.561 | INFO     | __main__:__init__:535 - IMG DLL: /usr/trimui/lib/libSDL2_image-2.0.so.0.2.3, 2.0.5
+2025-04-04 14:54:19.567 | INFO     | __main__:__init__:536 - MIX DLL: /usr/trimui/lib/libSDL2_mixer-2.0.so.0.0.1, 2.0.1
+2025-04-04 14:54:19.572 | INFO     | __main__:__init__:537 - HM_TESTING: False
+2025-04-04 14:54:19.578 | INFO     | __main__:__init__:547 - Opened GameController 0: b'Xbox 360 Controller'
+2025-04-04 14:54:19.583 | INFO     | __main__:__init__:548 -  b'0300a3845e0400008e02000014010000,Xbox 360 Controller,a:b0,b:b1,back:b6,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b8,leftshoulder:b4,leftstick:b9,lefttrigger:a2,leftx:a0,lefty:a1,rightshoulder:b5,rightstick:b10,righttrigger:a5,rightx:a3,righty:a4,start:b7,x:b2,y:b3,platform:Linux,'
+2025-04-04 14:54:19.604 | INFO     | harbourmaster.hardware:new_device_info:465 - {'name': 'TrimUI', 'version': '1.0.6', 'device': 'trimui-brick'}
+2025-04-04 14:54:19.614 | INFO     | harbourmaster.hardware:device_info:665 - DEVICE INFO: {'name': 'TrimUI', 'version': '1.0.6', 'device': 'trimui-brick', 'resolution': (1024, 768), 'analogsticks': 0, 'cpu': 'a133plus', 'capabilities': ['power', 'aarch64', 'restore', '4:3', '1024x768', 'TrimUI', 'trimui-brick', 'analog_0', 'hires', 'wide', '1gb'], 'ram': 1024, 'primary_arch': 'aarch64', 'glibc': '2.33'}
+2025-04-04 14:54:19.618 | INFO     | __main__:__init__:568 - Display size: 1024x768
+2025-04-04 14:54:19.626 | INFO     | __main__:__init__:609 - {'name': 'TrimUI', 'version': '1.0.6', 'device': 'trimui-brick', 'resolution': (1024, 768), 'analogsticks': 0, 'cpu': 'a133plus', 'capabilities': ['power', 'aarch64', 'restore', '4:3', '1024x768', 'TrimUI', 'trimui-brick', 'analog_0', 'hires', 'wide', '1gb', 'en_US'], 'ram': 1024, 'primary_arch': 'aarch64', 'glibc': '2.33'}
+2025-04-04 14:54:20.093 | INFO     | pugtheme:theme_load:130 - Loading theme /mnt/SDCARD/Apps/PortMaster/PortMaster/themes/MinUI/theme.json
+2025-04-04 14:54:20.101 | DEBUG    | pugtheme:theme_load:230 - - loading base_data
+2025-04-04 14:54:20.151 | DEBUG    | pugtheme:theme_load:255 - - loading elements:
+2025-04-04 14:54:20.162 | DEBUG    | pugtheme:theme_load:301 -   - loading section ports_list
+2025-04-04 14:54:20.170 | DEBUG    | pugtheme:theme_load:301 -   - loading section port_info
+2025-04-04 14:54:20.175 | DEBUG    | pugtheme:theme_load:301 -   - loading section port_info_popup
+2025-04-04 14:54:20.185 | DEBUG    | pugtheme:theme_load:301 -   - loading section main_menu
+2025-04-04 14:54:20.191 | DEBUG    | pugtheme:theme_load:301 -   - loading section option_menu
+2025-04-04 14:54:20.202 | DEBUG    | pugtheme:theme_load:301 -   - loading section themes_list
+2025-04-04 14:54:20.208 | DEBUG    | pugtheme:theme_load:301 -   - loading section runtime_list
+2025-04-04 14:54:20.214 | DEBUG    | pugtheme:theme_load:301 -   - loading section on_screen_keyboard
+2025-04-04 14:54:20.221 | DEBUG    | pugtheme:theme_load:301 -   - loading section filter_list
+2025-04-04 14:54:20.271 | DEBUG    | pugtheme:theme_load:301 -   - loading section message_window
+2025-04-04 14:54:20.277 | DEBUG    | pugtheme:theme_load:301 -   - loading section featured_ports_list
+2025-04-04 14:54:20.286 | DEBUG    | pugtheme:theme_load:301 -   - loading section message_box
+2025-04-04 14:54:20.292 | DEBUG    | pugtheme:theme_load:301 -   - loading section blank
+2025-04-04 14:54:20.302 | DEBUG    | pugtheme:theme_load:301 -   - loading section selection_list
+2025-04-04 14:54:20.308 | DEBUG    | pugtheme:theme_load:301 -   - loading section selection_list_description
+2025-04-04 14:54:20.313 | DEBUG    | pugtheme:theme_load:301 -   - loading section selection_list_images
+2025-04-04 14:54:20.319 | DEBUG    | pugtheme:theme_load:301 -   - loading section selection_list_description_images
+2025-04-04 14:54:20.324 | DEBUG    | pugtheme:theme_load:278 - - loading pallet:
+2025-04-04 14:54:20.329 | DEBUG    | pugtheme:theme_load:234 - - loading resources:
+2025-04-04 14:54:20.342 | DEBUG    | pugtheme:theme_load:250 -   - loading sound click.wav as click - [OKAY]
+2025-04-04 14:54:20.399 | DEBUG    | pugtheme:theme_load:250 -   - loading sound cancel.wav as cancel - [OKAY]
+2025-04-04 14:54:20.415 | DEBUG    | pugtheme:theme_load:250 -   - loading sound scroll.wav as scroll - [OKAY]
+2025-04-04 14:54:20.425 | DEBUG    | pugtheme:theme_load:250 -   - loading sound slide_up.wav as slide_up - [OKAY]
+2025-04-04 14:54:20.441 | DEBUG    | pugtheme:theme_load:250 -   - loading sound slide_down.wav as slide_down - [OKAY]
+2025-04-04 14:54:20.500 | DEBUG    | pugtheme:theme_load:244 -   - loading image buttons.png - [OKAY]
+2025-04-04 14:54:20.540 | DEBUG    | pugtheme:theme_load:242 -   - loading image no-image.jpg as NO_IMAGE - [OKAY]
+2025-04-04 14:54:20.544 | DEBUG    | pugtheme:theme_load:301 -   - loading section disclaimer
+2025-04-04 14:54:20.618 | DEBUG    | __main__:push_scene:1308 - PUSH SCENE LAYER messages
+2025-04-04 14:54:20.623 | DEBUG    | __main__:push_scene:1311 - SCENE LIST: ['root', 'messages']
+2025-04-04 14:54:22.281 | DEBUG    | __main__:pop_scene:1333 - POP SCENE LAYER messages
+2025-04-04 14:54:22.288 | DEBUG    | __main__:pop_scene:1336 - SCENE LIST: ['root']
+2025-04-04 14:54:49.083 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 14:54:49.194 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 14:54:49.321 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 14:54:49.432 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 14:54:49.498 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 14:54:49.613 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 14:54:49.740 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 14:54:49.848 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 14:54:50.126 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED A
+2025-04-04 14:54:50.161 | DEBUG    | __main__:push_scene:1308 - PUSH SCENE LAYER option
+2025-04-04 14:54:50.165 | DEBUG    | __main__:push_scene:1311 - SCENE LIST: ['root', 'option']
+2025-04-04 14:54:50.238 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED A
+2025-04-04 14:54:51.117 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 14:54:51.225 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 14:54:51.412 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 14:54:51.494 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 14:54:51.657 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 14:54:51.767 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 14:54:52.170 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 14:54:52.307 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 14:54:52.835 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 14:54:52.977 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 14:54:53.438 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 14:54:53.580 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 14:54:54.200 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 14:54:54.310 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 14:54:54.777 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 14:54:54.918 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 14:54:55.228 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED UP
+2025-04-04 14:54:55.335 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED UP
+2025-04-04 14:54:56.689 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED A
+2025-04-04 14:54:56.946 | DEBUG    | __main__:push_scene:1308 - PUSH SCENE LAYER runtime-manager
+2025-04-04 14:54:56.950 | DEBUG    | __main__:push_scene:1311 - SCENE LIST: ['root', 'option', 'runtime-manager']
+2025-04-04 14:54:57.064 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED A
+2025-04-04 14:55:06.530 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED UP
+2025-04-04 14:55:06.651 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED UP
+2025-04-04 14:55:12.238 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED UP
+2025-04-04 14:55:12.357 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED UP
+2025-04-04 14:55:12.423 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED UP
+2025-04-04 14:55:12.514 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED UP
+2025-04-04 14:55:12.579 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED UP
+2025-04-04 14:55:12.667 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED UP
+2025-04-04 14:55:12.796 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED B
+2025-04-04 14:55:12.801 | DEBUG    | __main__:pop_scene:1333 - POP SCENE LAYER runtime-manager
+2025-04-04 14:55:12.806 | DEBUG    | __main__:pop_scene:1336 - SCENE LIST: ['root', 'option']
+2025-04-04 14:55:12.913 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED B
+2025-04-04 14:55:13.867 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 14:55:13.978 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 14:55:28.473 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 14:55:28.551 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 14:55:28.708 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 14:55:28.788 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 14:55:28.920 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 14:55:28.999 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 14:55:32.228 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED UP
+2025-04-04 14:55:32.333 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED UP
+2025-04-04 14:55:33.067 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 14:55:33.172 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 14:55:33.458 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED UP
+2025-04-04 14:55:33.593 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED UP
+2025-04-04 14:55:33.658 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED UP
+2025-04-04 14:55:33.793 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED UP
+2025-04-04 14:56:37.186 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 14:56:37.292 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 14:56:37.844 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED UP
+2025-04-04 14:56:37.931 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED UP
+2025-04-04 14:56:38.034 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED UP
+2025-04-04 14:56:38.138 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED UP
+2025-04-04 14:56:38.204 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED UP
+2025-04-04 14:56:38.309 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED UP
+2025-04-04 14:56:38.587 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 14:56:38.663 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 14:56:38.764 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 14:56:38.868 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 14:56:38.934 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 14:56:39.046 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 14:56:39.599 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED UP
+2025-04-04 14:56:39.703 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED UP
+2025-04-04 14:56:39.768 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED UP
+2025-04-04 14:56:39.842 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED UP
+2025-04-04 14:56:39.938 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED UP
+2025-04-04 14:56:40.048 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED UP
+2025-04-04 14:56:40.514 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED B
+2025-04-04 14:56:40.519 | DEBUG    | __main__:pop_scene:1333 - POP SCENE LAYER option
+2025-04-04 14:56:40.523 | DEBUG    | __main__:pop_scene:1336 - SCENE LIST: ['root']
+2025-04-04 14:56:40.624 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED B
+2025-04-04 14:56:41.154 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED UP
+2025-04-04 14:56:41.264 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED UP
+2025-04-04 14:56:41.330 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED UP
+2025-04-04 14:56:41.411 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED UP
+2025-04-04 14:56:41.507 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED UP
+2025-04-04 14:56:41.615 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED UP
+2025-04-04 14:56:42.912 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED A
+2025-04-04 14:56:43.118 | DEBUG    | __main__:push_scene:1308 - PUSH SCENE LAYER ports
+2025-04-04 14:56:43.122 | DEBUG    | __main__:push_scene:1311 - SCENE LIST: ['root', 'ports']
+2025-04-04 14:56:43.213 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED A
+2025-04-04 14:56:43.672 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 14:56:43.814 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 14:56:43.911 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 14:56:46.142 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 14:56:46.208 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED R1
+2025-04-04 14:56:46.408 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED R1
+2025-04-04 14:56:46.723 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED R1
+2025-04-04 14:56:46.872 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED R1
+2025-04-04 14:56:47.242 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED R1
+2025-04-04 14:56:47.388 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED R1
+2025-04-04 14:56:47.525 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED R1
+2025-04-04 14:56:47.671 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED R1
+2025-04-04 14:56:47.829 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED R1
+2025-04-04 14:56:47.974 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED R1
+2025-04-04 14:56:48.445 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED R1
+2025-04-04 14:56:48.590 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED R1
+2025-04-04 14:56:48.723 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED R1
+2025-04-04 14:56:48.844 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED R1
+2025-04-04 14:56:48.972 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED R1
+2025-04-04 14:56:49.077 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED R1
+2025-04-04 14:56:49.203 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED R1
+2025-04-04 14:56:49.346 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED R1
+2025-04-04 14:56:49.412 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED R1
+2025-04-04 14:56:50.992 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED R1
+2025-04-04 14:56:51.119 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED R1
+2025-04-04 14:56:52.273 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED R1
+2025-04-04 14:56:52.343 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 14:56:52.428 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED R1
+2025-04-04 14:56:52.559 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/2048.screenshot.jpg
+2025-04-04 14:56:52.566 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED R1
+2025-04-04 14:56:52.734 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED R1
+2025-04-04 14:56:52.836 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED R1
+2025-04-04 14:56:52.902 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED R1
+2025-04-04 14:56:53.466 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED R1
+2025-04-04 14:56:53.582 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/abombniball.screenshot.jpg
+2025-04-04 14:56:53.588 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/abes_adventure.screenshot.jpg
+2025-04-04 14:56:53.598 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/a7xpg.screenshot.png
+2025-04-04 14:56:53.606 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/apondbeyond.screenshot.png
+2025-04-04 14:56:53.613 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/ametadatagame.screenshot.png
+2025-04-04 14:56:53.617 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/akeyspath.screenshot.png
+2025-04-04 14:56:53.623 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED R1
+2025-04-04 14:56:53.819 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED R1
+2025-04-04 14:56:53.904 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED R1
+2025-04-04 14:56:54.034 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED R1
+2025-04-04 14:56:54.196 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED R1
+2025-04-04 14:56:54.488 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED R1
+2025-04-04 14:56:54.605 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/alephone-marathoninfinity.screenshot.jpg
+2025-04-04 14:56:54.610 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/alephone-marathon2.screenshot.jpg
+2025-04-04 14:56:54.616 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/alephone-marathon.screenshot.jpg
+2025-04-04 14:56:54.621 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/alchemyquest.screenshot.jpg
+2025-04-04 14:56:54.626 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/air.screenshot.png
+2025-04-04 14:56:54.631 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/afternoonstalker.screenshot.png
+2025-04-04 14:56:54.636 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/aerofoil.screenshot.png
+2025-04-04 14:56:54.642 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/abuse.screenshot.jpg
+2025-04-04 14:56:54.647 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/profadeluxe.screenshot.jpg
+2025-04-04 14:56:54.652 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/absolutereflex.screenshot.jpg
+2025-04-04 14:56:54.993 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED R1
+2025-04-04 14:56:55.550 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED R1
+2025-04-04 14:56:55.632 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/droid7.screenshot.png
+2025-04-04 14:56:55.644 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/donottakethiscathome.screenshot.png
+2025-04-04 14:56:55.659 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/deathchase3d.screenshot.png
+2025-04-04 14:56:55.664 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/crushborgs.screenshot.png
+2025-04-04 14:56:55.669 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/clannad.screenshot.png
+2025-04-04 14:56:55.674 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/catacomb3d.screenshot.png
+2025-04-04 14:56:55.680 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/bytepath.screenshot.jpg
+2025-04-04 14:56:55.685 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/blossomtales2.screenshot.jpg
+2025-04-04 14:56:55.695 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/biolab.screenshot.png
+2025-04-04 14:56:55.700 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/asylum.screenshot.jpg
+2025-04-04 14:56:55.705 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/alienblaster.screenshot.jpg
+2025-04-04 14:56:56.659 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/gunroar.screenshot.png
+2025-04-04 14:56:56.664 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/freegish.screenshot.jpg
+2025-04-04 14:56:56.670 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/gigalomania.screenshot.jpg
+2025-04-04 14:56:56.675 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/geometrystrike.screenshot.jpg
+2025-04-04 14:56:56.680 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/gemrb.screenshot.jpg
+2025-04-04 14:56:56.685 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/gatoroboto.screenshot.png
+2025-04-04 14:56:56.691 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/foxtower.screenshot.png
+2025-04-04 14:56:56.701 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/fallout2.screenshot.jpg
+2025-04-04 14:56:56.706 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/elsewhereinthenight.screenshot.png
+2025-04-04 14:56:56.713 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/elechead.screenshot.png
+2025-04-04 14:56:56.904 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 14:56:57.671 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/hackgrid.screenshot.png
+2025-04-04 14:56:57.676 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/gyrobossdx.screenshot.png
+2025-04-04 14:56:57.784 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 14:56:57.888 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 14:56:57.985 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 14:56:58.104 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 14:56:58.692 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/hikoban.screenshot.png
+2025-04-04 14:56:58.697 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/hijinx.screenshot.jpg
+2025-04-04 14:56:58.898 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 14:56:58.986 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 14:56:59.721 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/hocoslamfy.screenshot.jpg
+2025-04-04 14:57:00.316 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 14:57:00.412 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 14:57:00.509 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 14:57:00.588 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 14:57:00.623 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 14:57:00.747 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/infra_arcana.screenshot.png
+2025-04-04 14:57:00.752 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/inertiablast.screenshot.png
+2025-04-04 14:57:00.758 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/imagestriker.screenshot.png
+2025-04-04 14:57:01.791 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/ionfury.screenshot.png
+2025-04-04 14:57:01.796 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/invaders.screenshot.jpg
+2025-04-04 14:57:01.802 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/interstatedrifter.screenshot.png
+2025-04-04 14:57:01.808 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/threecoins.screenshot.jpg
+2025-04-04 14:57:02.839 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/lisathebashful.screenshot.jpg
+2025-04-04 14:57:02.844 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/lierolibre.screenshot.png
+2025-04-04 14:57:02.850 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/legbreaker.screenshot.png
+2025-04-04 14:57:02.860 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/leftdeadspace.screenshot.jpg
+2025-04-04 14:57:02.865 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/leapyear.screenshot.png
+2025-04-04 14:57:02.870 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/lbreakouthd.screenshot.jpg
+2025-04-04 14:57:02.875 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/lawnbusterforhire.screenshot.png
+2025-04-04 14:57:02.880 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/lastmission.screenshot.png
+2025-04-04 14:57:02.886 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/laserkombat.screenshot.jpg
+2025-04-04 14:57:02.891 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/labyrinthoflegendaryloot.screenshot.png
+2025-04-04 14:57:02.896 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/labremnants.screenshot.png
+2025-04-04 14:57:02.902 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/iosas.screenshot.png
+2025-04-04 14:57:03.892 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/littlegptracker.screenshot.png
+2025-04-04 14:57:03.902 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/littlerunmo.screenshot.png
+2025-04-04 14:57:03.907 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/littlefroggame.screenshot.png
+2025-04-04 14:57:03.913 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/littlebusters.screenshot.png
+2025-04-04 14:57:03.918 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/lisatheundone.screenshot.jpg
+2025-04-04 14:57:03.923 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/lisatheunbreakable.screenshot.jpg
+2025-04-04 14:57:03.928 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/lisathetimeless.screenshot.jpg
+2025-04-04 14:57:03.934 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/lisathepointless.screenshot.jpg
+2025-04-04 14:57:03.939 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/lisathepainful.screenshot.jpg
+2025-04-04 14:57:03.947 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/lisathejoyful.screenshot.jpg
+2025-04-04 14:57:03.952 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/lisathehopeful.screenshot.jpg
+2025-04-04 14:57:04.939 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/magicalbroom.screenshot.png
+2025-04-04 14:57:04.944 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/lunarlux.screenshot.jpg
+2025-04-04 14:57:04.949 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/lugaruhd.screenshot.png
+2025-04-04 14:57:04.954 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/luck.be.a.landlord.screenshot.png
+2025-04-04 14:57:04.959 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/lucid.screenshot.jpg
+2025-04-04 14:57:04.965 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/lostpotato.screenshot.png
+2025-04-04 14:57:04.970 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/lostinsideact1.screenshot.png
+2025-04-04 14:57:04.975 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/lose95.screenshot.png
+2025-04-04 14:57:04.980 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/loguploader.screenshot.png
+2025-04-04 14:57:04.986 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pmmv/loderunneronline.screenshot.png
+2025-04-04 14:57:04.996 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/locust.screenshot.png
+2025-04-04 14:57:05.991 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/megaman.screenshot.jpg
+2025-04-04 14:57:05.996 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/megaball.screenshot.png
+2025-04-04 14:57:06.001 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/openmohaa.screenshot.png
+2025-04-04 14:57:06.007 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/meanderland.screenshot.jpg
+2025-04-04 14:57:06.012 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/meandmyshadow.screenshot.jpg
+2025-04-04 14:57:06.017 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/maximilien_adventure.screenshot.png
+2025-04-04 14:57:06.023 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/maxdownforce.screenshot.png
+2025-04-04 14:57:06.028 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/maskless.screenshot.png
+2025-04-04 14:57:06.033 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/margot_beatrice_adventure.screenshot.jpg
+2025-04-04 14:57:06.044 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/manicminer.screenshot.png
+2025-04-04 14:57:06.050 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/mago.screenshot.png
+2025-04-04 14:57:07.032 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/minidoom2.screenshot.png
+2025-04-04 14:57:07.037 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/minetest.screenshot.png
+2025-04-04 14:57:07.043 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/minesector.screenshot.png
+2025-04-04 14:57:07.048 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/milkinside.screenshot.png
+2025-04-04 14:57:07.053 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/mightymike.screenshot.jpg
+2025-04-04 14:57:07.059 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/microplatformer.screenshot.png
+2025-04-04 14:57:07.064 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/metanethunterg4.screenshot.png
+2025-04-04 14:57:07.069 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/meritous.screenshot.jpg
+2025-04-04 14:57:07.079 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/mercenarykings.screenshot.png
+2025-04-04 14:57:07.084 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/megazeux.screenshot.png
+2025-04-04 14:57:07.089 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/megamanx816-bit.screenshot.png
+2025-04-04 14:57:08.072 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/multris.screenshot.jpg
+2025-04-04 14:57:08.077 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/multimanicminer.screenshot.png
+2025-04-04 14:57:08.082 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/mreader.screenshot.png
+2025-04-04 14:57:08.088 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/mrrescue.screenshot.png
+2025-04-04 14:57:08.093 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/mr.boom.screenshot.jpg
+2025-04-04 14:57:08.098 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/moonlightnew.screenshot.jpg
+2025-04-04 14:57:08.103 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/moonleap.screenshot.png
+2025-04-04 14:57:08.114 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/monsterbattlegrounds.screenshot.png
+2025-04-04 14:57:08.119 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/mojotron.screenshot.png
+2025-04-04 14:57:08.125 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/missdriller.screenshot.jpg
+2025-04-04 14:57:08.130 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/mirrormagic.screenshot.jpg
+2025-04-04 14:57:08.136 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 14:57:08.338 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED UP
+2025-04-04 14:57:08.446 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED UP
+2025-04-04 14:57:08.512 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED UP
+2025-04-04 14:57:08.590 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED UP
+2025-04-04 14:57:08.686 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED UP
+2025-04-04 14:57:08.768 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED UP
+2025-04-04 14:57:08.835 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED UP
+2025-04-04 14:57:08.912 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED UP
+2025-04-04 14:57:09.008 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED UP
+2025-04-04 14:57:09.087 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED UP
+2025-04-04 14:57:09.161 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED UP
+2025-04-04 14:57:09.270 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED UP
+2025-04-04 14:57:09.366 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED UP
+2025-04-04 14:57:09.444 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED UP
+2025-04-04 14:57:10.088 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 14:57:10.202 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 14:57:10.328 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 14:57:10.436 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 14:57:10.532 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 14:57:10.671 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 14:57:10.858 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 14:57:10.967 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 14:57:11.033 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 14:57:11.164 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 14:57:11.230 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 14:57:11.314 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 14:57:11.380 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 14:57:11.490 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 14:57:11.586 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 14:57:11.694 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 14:57:11.730 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 14:57:12.127 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/must-have-been-the-wind.screenshot.png
+2025-04-04 14:57:12.134 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/murtop.screenshot.png
+2025-04-04 14:57:13.133 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/nebulus.screenshot.png
+2025-04-04 14:57:13.138 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/nanosaur2.screenshot.jpg
+2025-04-04 14:57:13.149 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/nanobounce.screenshot.jpg
+2025-04-04 14:57:13.154 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/nam.screenshot.jpg
+2025-04-04 14:57:13.159 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/mythos.screenshot.png
+2025-04-04 14:57:13.164 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/mutant_tank_knights.screenshot.jpg
+2025-04-04 14:57:14.038 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 14:57:14.134 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/noiz2sa.screenshot.png
+2025-04-04 14:57:14.138 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/noparachute.screenshot.jpg
+2025-04-04 14:57:14.147 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/nkaruga.screenshot.jpg
+2025-04-04 14:57:14.153 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/njam.screenshot.png
+2025-04-04 14:57:14.204 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/nikwi.screenshot.jpg
+2025-04-04 14:57:14.214 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/nightofelchupacabra.screenshot.png
+2025-04-04 14:57:14.219 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/nextdoor.screenshot.png
+2025-04-04 14:57:14.224 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/neverball.screenshot.jpg
+2025-04-04 14:57:14.229 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/netsurf.screenshot.png
+2025-04-04 14:57:14.234 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/ner.screenshot.jpg
+2025-04-04 14:57:14.239 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 14:57:14.435 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 14:57:15.139 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/nonny.screenshot.jpg
+2025-04-04 14:57:18.723 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED A
+2025-04-04 14:57:18.728 | DEBUG    | pugscene:do_update:1699 - install: owlboy.zip
+2025-04-04 14:57:18.789 | DEBUG    | pugscene:update_port:1851 - install: owlboy.zip -> ['action', 'adventure', 'johnny on flame', '!rtr'] -> {'version': 4, 'name': 'owlboy.zip', 'items': ['owlboy/', 'Owlboy.sh'], 'items_opt': None, 'attr': {'title': 'Owlboy', 'desc': 'A story-driven platform adventure game, where you can fly and explore a brand new world in the clouds.  Text is not readable on devices with screens less than 5 inches.', 'inst': 'You must have a copy of Owlboy for Linux copied to the ports/owlboy/gamedata folder.', 'genres': ['action', 'adventure'], 'porter': ['Johnny on Flame'], 'image': {'screenshot': 'screenshot.jpg', 'covers': ['cover.png'], 'thumbnail': None, 'video': None}, 'rtr': False, 'runtime': ['mono-6.12.0.122-aarch64.squashfs'], 'reqs': [], 'arch': [], 'desc_md': None, 'inst_md': None, 'exp': False, 'min_glibc': ''}, 'source': {'date_added': '2022-03-18', 'date_updated': '2024-12-27', 'md5': 'd3e4db46507212800952e49475d70b70', 'release_id': '2024-12-27_1725', 'size': 2589373, 'url': 'https://github.com/PortsMaster/PortMaster-New/releases/download/2024-12-27_1725/owlboy.zip'}}
+2025-04-04 14:57:18.804 | DEBUG    | __main__:push_scene:1308 - PUSH SCENE LAYER port_info
+2025-04-04 14:57:18.808 | DEBUG    | __main__:push_scene:1311 - SCENE LIST: ['root', 'ports', 'port_info']
+2025-04-04 14:57:18.852 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED A
+2025-04-04 14:57:21.644 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED UP
+2025-04-04 14:57:21.657 | DEBUG    | __main__:push_scene:1303 - PUSH SCENE ADD port_info
+2025-04-04 14:57:21.662 | DEBUG    | __main__:push_scene:1305 - SCENE LIST: ['root', 'ports', 'port_info']
+2025-04-04 14:57:21.755 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED UP
+2025-04-04 14:57:30.716 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED B
+2025-04-04 14:57:30.724 | DEBUG    | __main__:pop_scene:1324 - POP SCENE REM port_info
+2025-04-04 14:57:30.772 | DEBUG    | __main__:pop_scene:1328 - SCENE LIST: ['root', 'ports', 'port_info']
+2025-04-04 14:57:30.814 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED B
+2025-04-04 14:57:32.257 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED B
+2025-04-04 14:57:32.263 | DEBUG    | __main__:pop_scene:1333 - POP SCENE LAYER port_info
+2025-04-04 14:57:32.267 | DEBUG    | __main__:pop_scene:1336 - SCENE LIST: ['root', 'ports']
+2025-04-04 14:57:32.530 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED B
+2025-04-04 14:57:45.381 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED A
+2025-04-04 14:57:45.393 | DEBUG    | pugscene:do_update:1699 - install: owlboy.zip
+2025-04-04 14:57:45.404 | DEBUG    | pugscene:update_port:1851 - install: owlboy.zip -> ['action', 'adventure', 'johnny on flame', '!rtr'] -> {'version': 4, 'name': 'owlboy.zip', 'items': ['owlboy/', 'Owlboy.sh'], 'items_opt': None, 'attr': {'title': 'Owlboy', 'desc': 'A story-driven platform adventure game, where you can fly and explore a brand new world in the clouds.  Text is not readable on devices with screens less than 5 inches.', 'inst': 'You must have a copy of Owlboy for Linux copied to the ports/owlboy/gamedata folder.', 'genres': ['action', 'adventure'], 'porter': ['Johnny on Flame'], 'image': {'screenshot': 'screenshot.jpg', 'covers': ['cover.png'], 'thumbnail': None, 'video': None}, 'rtr': False, 'runtime': ['mono-6.12.0.122-aarch64.squashfs'], 'reqs': [], 'arch': [], 'desc_md': None, 'inst_md': None, 'exp': False, 'min_glibc': ''}, 'source': {'date_added': '2022-03-18', 'date_updated': '2024-12-27', 'md5': 'd3e4db46507212800952e49475d70b70', 'release_id': '2024-12-27_1725', 'size': 2589373, 'url': 'https://github.com/PortsMaster/PortMaster-New/releases/download/2024-12-27_1725/owlboy.zip'}}
+2025-04-04 14:57:45.412 | DEBUG    | __main__:push_scene:1308 - PUSH SCENE LAYER port_info
+2025-04-04 14:57:45.417 | DEBUG    | __main__:push_scene:1311 - SCENE LIST: ['root', 'ports', 'port_info']
+2025-04-04 14:57:45.490 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED A
+2025-04-04 14:57:46.171 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED UP
+2025-04-04 14:57:46.182 | DEBUG    | __main__:push_scene:1303 - PUSH SCENE ADD port_info
+2025-04-04 14:57:46.231 | DEBUG    | __main__:push_scene:1305 - SCENE LIST: ['root', 'ports', 'port_info']
+2025-04-04 14:57:46.274 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED UP
+2025-04-04 14:58:34.088 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED B
+2025-04-04 14:58:34.093 | DEBUG    | __main__:pop_scene:1324 - POP SCENE REM port_info
+2025-04-04 14:58:34.099 | DEBUG    | __main__:pop_scene:1328 - SCENE LIST: ['root', 'ports', 'port_info']
+2025-04-04 14:58:34.201 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED B
+2025-04-04 14:58:34.545 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED B
+2025-04-04 14:58:34.550 | DEBUG    | __main__:pop_scene:1333 - POP SCENE LAYER port_info
+2025-04-04 14:58:34.556 | DEBUG    | __main__:pop_scene:1336 - SCENE LIST: ['root', 'ports']
+2025-04-04 14:58:34.816 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED B
+2025-04-04 14:58:35.439 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED B
+2025-04-04 14:58:35.444 | DEBUG    | __main__:pop_scene:1333 - POP SCENE LAYER ports
+2025-04-04 14:58:35.456 | DEBUG    | __main__:pop_scene:1336 - SCENE LIST: ['root']
+2025-04-04 14:58:35.529 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED B
+2025-04-04 14:58:36.236 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 14:58:36.346 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 15:01:09.830 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 15:01:09.939 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 15:01:10.004 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 15:01:10.113 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 15:01:10.240 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 15:01:10.326 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 15:01:11.136 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED UP
+2025-04-04 15:01:11.239 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED UP
+2025-04-04 15:01:11.306 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED UP
+2025-04-04 15:01:11.417 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED UP
+2025-04-04 15:01:11.483 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED UP
+2025-04-04 15:01:11.587 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED UP
+2025-04-04 15:01:12.822 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 15:01:12.926 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 15:01:13.053 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED A
+2025-04-04 15:01:13.232 | DEBUG    | __main__:push_scene:1308 - PUSH SCENE LAYER ports
+2025-04-04 15:01:13.236 | DEBUG    | __main__:push_scene:1311 - SCENE LIST: ['root', 'ports']
+2025-04-04 15:01:13.283 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED A
+2025-04-04 15:01:13.393 | DEBUG    | pySDL2gui:_clean:1211 - Unloaded: /mnt/SDCARD/Apps/PortMaster/PortMaster/config/images_pm/notenoughtime.screenshot.png
+2025-04-04 15:01:14.175 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 15:01:14.278 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 15:01:14.593 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED UP
+2025-04-04 15:01:14.694 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED UP
+2025-04-04 15:01:14.767 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED RIGHT
+2025-04-04 15:01:14.808 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 15:01:14.848 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED RIGHT
+2025-04-04 15:01:14.896 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 15:01:14.932 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED LEFT
+2025-04-04 15:01:15.064 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED LEFT
+2025-04-04 15:01:15.442 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED A
+2025-04-04 15:01:15.446 | DEBUG    | pugscene:do_update:1699 - uninstall: apocrunner.zip
+2025-04-04 15:01:15.457 | DEBUG    | pugscene:update_port:1851 - uninstall: apocrunner.zip -> ['action', 'arcade', 'platformer', 'mattyj513', 't0b10', 'rtr', 'installed'] -> {'version': 4, 'name': 'apocrunner.zip', 'items': ['Apoc Runner.sh', 'apocrunner/'], 'items_opt': None, 'attr': {'title': 'Apoc Runner', 'porter': ['mattyj513', 't0b10'], 'desc': "As the world burns, as the streets crumble, you cling to one thing: Survival. An unstoppable alien blight has taken hold of the earth, and there's no fighting it. Escape is the only option. Run, jump, and slide your way through urban destruction in this intense runner!", 'desc_md': "As the world burns, as the streets crumble, you cling to one thing: **Survival.** An unstoppable alien blight has taken hold of the earth, and there's no fighting it. **Escape** is the **only option**. Run, jump, and slide your way through urban destruction in this intense runner!", 'inst': "Thanks to Omnitron Studios, there is no need to download the game from itch.io to obtain the game files. This port is 'Ready to Run' as soon as it's been installed on your device.", 'inst_md': "Thanks to [**Omnitron Studios**](https://omnitron-studios.itch.io), there is no need to download the game from [itch.io](https://omnitron-studios.itch.io/apoc-runner) to obtain the game files. This port is now *Ready to Run* as soon as it's been installed on your device.", 'genres': ['action', 'arcade', 'platformer'], 'image': 'screenshot.png', 'rtr': True, 'exp': False, 'runtime': [], 'reqs': [], 'arch': ['aarch64'], 'min_glibc': ''}, 'status': {'source': 'PortMaster', 'md5': 'eca03febf7321f5f0eb37e2eb87ff298', 'status': 'Installed'}, 'files': {'port.json': 'apocrunner/port.json', 'Apoc Runner.sh': 'Apoc Runner.sh', 'apocrunner/': 'apocrunner/'}, 'source': {'date_added': '2023-10-19', 'date_updated': '2024-12-03', 'md5': 'eca03febf7321f5f0eb37e2eb87ff298', 'release_id': '2024-12-03_1159', 'size': 24780440, 'url': 'https://github.com/PortsMaster/PortMaster-New/releases/download/2024-12-03_1159/apocrunner.zip'}}
+2025-04-04 15:01:15.470 | DEBUG    | __main__:push_scene:1308 - PUSH SCENE LAYER port_info
+2025-04-04 15:01:15.481 | DEBUG    | __main__:push_scene:1311 - SCENE LIST: ['root', 'ports', 'port_info']
+2025-04-04 15:01:15.525 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED A
+2025-04-04 15:01:17.704 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED Y
+2025-04-04 15:01:17.724 | DEBUG    | __main__:push_scene:1308 - PUSH SCENE LAYER message_box
+2025-04-04 15:01:17.729 | DEBUG    | __main__:push_scene:1311 - SCENE LIST: ['root', 'ports', 'port_info', 'message_box']
+2025-04-04 15:01:17.811 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED Y
+2025-04-04 15:01:18.947 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED A
+2025-04-04 15:01:18.982 | DEBUG    | __main__:pop_scene:1333 - POP SCENE LAYER message_box
+2025-04-04 15:01:18.988 | DEBUG    | __main__:pop_scene:1336 - SCENE LIST: ['root', 'ports', 'port_info']
+2025-04-04 15:01:19.003 | DEBUG    | __main__:push_scene:1308 - PUSH SCENE LAYER messages
+2025-04-04 15:01:19.007 | DEBUG    | __main__:push_scene:1311 - SCENE LIST: ['root', 'ports', 'port_info', 'messages']
+2025-04-04 15:01:19.023 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED A
+2025-04-04 15:01:19.076 | DEBUG    | harbourmaster.platform:port_uninstall:228 - PlatformTrimUI: Port Uninstall apocrunner.zip
+2025-04-04 15:01:19.081 | INFO     | harbourmaster.platform:remove_port_script:844 - Removing: /mnt/SDCARD/Roms/PORTS/Apoc Runner.sh
+2025-04-04 15:01:19.521 | DEBUG    | __main__:push_scene:1308 - PUSH SCENE LAYER message_box
+2025-04-04 15:01:19.528 | DEBUG    | __main__:push_scene:1311 - SCENE LIST: ['root', 'ports', 'port_info', 'messages', 'message_box']
+2025-04-04 15:01:20.092 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED A
+2025-04-04 15:01:20.128 | DEBUG    | __main__:pop_scene:1333 - POP SCENE LAYER message_box
+2025-04-04 15:01:20.133 | DEBUG    | __main__:pop_scene:1336 - SCENE LIST: ['root', 'ports', 'port_info', 'messages']
+2025-04-04 15:01:20.157 | DEBUG    | __main__:pop_scene:1333 - POP SCENE LAYER messages
+2025-04-04 15:01:20.162 | DEBUG    | __main__:pop_scene:1336 - SCENE LIST: ['root', 'ports', 'port_info']
+2025-04-04 15:01:20.168 | DEBUG    | __main__:pop_scene:1333 - POP SCENE LAYER port_info
+2025-04-04 15:01:20.174 | DEBUG    | __main__:pop_scene:1336 - SCENE LIST: ['root', 'ports']
+2025-04-04 15:01:20.219 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED A
+2025-04-04 15:01:21.548 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 15:01:21.691 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 15:01:22.095 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 15:01:22.195 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 15:01:22.230 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED LEFT
+2025-04-04 15:01:22.301 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED UP
+2025-04-04 15:01:22.341 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED LEFT
+2025-04-04 15:01:22.346 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED UP
+2025-04-04 15:01:22.935 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED B
+2025-04-04 15:01:22.943 | DEBUG    | __main__:pop_scene:1333 - POP SCENE LAYER ports
+2025-04-04 15:01:22.950 | DEBUG    | __main__:pop_scene:1336 - SCENE LIST: ['root']
+2025-04-04 15:01:23.031 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED B
+2025-04-04 15:01:23.555 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED B
+2025-04-04 15:01:23.564 | DEBUG    | __main__:push_scene:1308 - PUSH SCENE LAYER message_box
+2025-04-04 15:01:23.569 | DEBUG    | __main__:push_scene:1311 - SCENE LIST: ['root', 'message_box']
+2025-04-04 15:01:23.646 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED B
+2025-04-04 15:01:24.936 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED B
+2025-04-04 15:01:24.971 | DEBUG    | __main__:pop_scene:1333 - POP SCENE LAYER message_box
+2025-04-04 15:01:24.976 | DEBUG    | __main__:pop_scene:1336 - SCENE LIST: ['root']
+2025-04-04 15:01:25.022 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED B
+2025-04-04 15:01:25.668 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 15:01:25.776 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 15:01:25.872 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED DOWN
+2025-04-04 15:01:26.007 | DEBUG    | pySDL2gui:handle_events:1531 - RELEASED DOWN
+2025-04-04 15:01:26.104 | DEBUG    | pySDL2gui:handle_events:1522 - PRESSED A
+2025-04-04 15:01:26.120 | DEBUG    | __main__:main:2061 - <harbourmaster.harbour.HarbourMaster object at 0x7f99e18b50>: trimui
+2025-04-04 15:01:26.124 | DEBUG    | __main__:main:2063 - True
+2025-04-04 15:01:26.133 | DEBUG    | __main__:main:2069 - /mnt/SDCARD/Apps/PortMaster/PortMaster/.trimui-refresh
+0: 1
+{'name': 'TrimUI', 'version': '1.0.6', 'device': 'trimui-brick', 'resolution': (1024, 768), 'analogsticks': 0, 'cpu': 'a133plus', 'capabilities': ['power', 'aarch64', 'restore', '4:3', '1024x768', 'TrimUI', 'trimui-brick', 'analog_0', 'hires', 'wide', '1gb', 'en_US'], 'ram': 1024, 'primary_arch': 'aarch64', 'glibc': '2.33'}
+XBOX FIXER
+REPEAT DOWN 15
+REPEAT DOWN 12
+REPEAT DOWN 20
+REPEAT DOWN 46
+REPEAT DOWN 32
+REPEAT DOWN 42
+REPEAT DOWN 50
+REPEAT DOWN 36
+REPEAT DOWN 9
+REPEAT DOWN 15
+REPEAT DOWN 61
+REPEAT DOWN 42
+REPEAT DOWN 39
+REPEAT DOWN 36
+REPEAT DOWN 39
+REPEAT DOWN 14
+REPEAT DOWN 49
+REPEAT DOWN 37
+REPEAT DOWN 41
+REPEAT DOWN 97
+REPEAT DOWN 42
+REPEAT DOWN 34
+REPEAT DOWN 24
+REPEAT DOWN 71
+REPEAT DOWN 13
+REPEAT DOWN 30
+REPEAT DOWN 56
+REPEAT DOWN 34
+REPEAT DOWN 21
+REPEAT DOWN 114
+REPEAT DOWN 7
+REPEAT DOWN 29
+REPEAT DOWN 22
+REPEAT DOWN 32
+REPEAT DOWN 71
+REPEAT DOWN 19
+REPEAT DOWN 47
+REPEAT DOWN 14
+REPEAT DOWN 9
+REPEAT DOWN 38
+REPEAT DOWN 100
+REPEAT DOWN 40
+REPEAT DOWN 6
+REPEAT DOWN 9
+REPEAT DOWN 30
+REPEAT DOWN 29
+REPEAT DOWN 43
+REPEAT DOWN 61
+REPEAT DOWN 57
+REPEAT DOWN 36
+REPEAT DOWN 97
+REPEAT DOWN 16
+REPEAT DOWN 21
+REPEAT DOWN 19
+REPEAT DOWN 32
+REPEAT DOWN 22
+REPEAT DOWN 59
+REPEAT DOWN 10
+REPEAT DOWN 14
+REPEAT DOWN 63
+REPEAT DOWN 19
+REPEAT DOWN 10
+REPEAT DOWN 16
+REPEAT DOWN 42
+REPEAT DOWN 7
+REPEAT DOWN 22
+REPEAT DOWN 14
+REPEAT DOWN 40
+REPEAT DOWN 114
+REPEAT DOWN 38
+REPEAT DOWN 19
+REPEAT DOWN 43
+REPEAT DOWN 39
+REPEAT DOWN 21
+REPEAT DOWN 7
+REPEAT DOWN 35
+REPEAT DOWN 40
+REPEAT DOWN 14
+REPEAT DOWN 48
+REPEAT DOWN 94
+REPEAT DOWN 21
+REPEAT DOWN 32
+REPEAT DOWN 30
+REPEAT DOWN 25
+REPEAT DOWN 39
+REPEAT DOWN 25
+REPEAT DOWN 25
+REPEAT DOWN 16
+REPEAT DOWN 48
+REPEAT DOWN 35
+REPEAT DOWN 80
+REPEAT DOWN 23
+REPEAT DOWN 20
+REPEAT DOWN 29
+REPEAT DOWN 8
+REPEAT DOWN 27
+REPEAT DOWN 37
+REPEAT DOWN 63
+REPEAT DOWN 39
+REPEAT DOWN 29
+REPEAT DOWN 36
+REPEAT DOWN 83
+REPEAT DOWN 35
+REPEAT DOWN 12
+REPEAT DOWN 46
+REPEAT DOWN 4
+REPEAT DOWN 26
+REPEAT DOWN 45
+REPEAT DOWN 18
+REPEAT DOWN 28
+REPEAT DOWN 63
+REPEAT DOWN 9
+REPEAT DOWN 93
+REPEAT DOWN 28
+REPEAT DOWN 25
+REPEAT DOWN 42
+REPEAT DOWN 32
+REPEAT DOWN 44
+REPEAT DOWN 30
+REPEAT DOWN 11
+REPEAT DOWN 29
+REPEAT DOWN 11
+REPEAT DOWN 31
+REPEAT DOWN 15
+REPEAT DOWN 39
+REPEAT DOWN 35
+REPEAT DOWN 39
+REPEAT DOWN 39
+REPEAT DOWN 33
+REPEAT DOWN 80
+REPEAT DOWN 41
+REPEAT DOWN 8
+REPEAT DOWN 11
+REPEAT DOWN 35
+REPEAT DOWN 36
+REPEAT DOWN 39
+REPEAT DOWN 13
+REPEAT DOWN 30
+REPEAT DOWN 21
+Uninstalling Apoc Runner
+- removing Apoc Runner.sh
+- removing apocrunner/
+current_mode 1024x768
+SDL_UDEV_DEVICEADDED 2 /dev/input/event1
+SDL_UDEV_DEVICEADDED 8 /dev/audio
+SDL_UDEV_DEVICEADDED 8 /dev/dsp
+SDL_UDEV_DEVICEADDED 2 /dev/input/event2
+SDL_UDEV_DEVICEADDED 8 /dev/mixer
+SDL_UDEV_DEVICEADDED 8 /dev/snd/pcmC0D0c
+SDL_UDEV_DEVICEADDED 8 /dev/snd/pcmC0D0p
+SDL_UDEV_DEVICEADDED 8 /dev/snd/controlC0
+SDL_UDEV_DEVICEADDED 2 /dev/input/event0
+SDL_UDEV_DEVICEADDED 6 /dev/input/event3
+SDL_UDEV_DEVICEADDED 6 /dev/input/js0
+SDL_UDEV_DEVICEADDED 8 /dev/snd/seq
+SDL_UDEV_DEVICEADDED 8 /dev/sequencer
+SDL_UDEV_DEVICEADDED 8 /dev/sequencer2
+SDL_UDEV_DEVICEADDED 8 /dev/snd/timer
+SDL_UDEV_DEVICEADDED 2 /dev/input/event1
+SDL_UDEV_DEVICEADDED 8 /dev/audio
+SDL_UDEV_DEVICEADDED 8 /dev/dsp
+SDL_UDEV_DEVICEADDED 2 /dev/input/event2
+SDL_UDEV_DEVICEADDED 8 /dev/mixer
+SDL_UDEV_DEVICEADDED 8 /dev/snd/pcmC0D0c
+SDL_UDEV_DEVICEADDED 8 /dev/snd/pcmC0D0p
+SDL_UDEV_DEVICEADDED 8 /dev/snd/controlC0
+SDL_UDEV_DEVICEADDED 2 /dev/input/event0
+SDL_UDEV_DEVICEADDED 6 /dev/input/event3
+SDL_UDEV_DEVICEADDED 6 /dev/input/js0
+SDL_UDEV_DEVICEADDED 8 /dev/snd/seq
+SDL_UDEV_DEVICEADDED 8 /dev/sequencer
+SDL_UDEV_DEVICEADDED 8 /dev/sequencer2
+SDL_UDEV_DEVICEADDED 8 /dev/snd/timer
+MALI_CreateWindow:0x5590886f50 done.
+Segmentation fault
+find: /mnt/SDCARD/Imgs/PORTS/: No such file or directory

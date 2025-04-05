@@ -119,12 +119,27 @@ resize_image() {
 
 get_mapped_name() {
     local rom_file="$1"
-    local map_file="$PARENT_DIR/.scraper/bin/map.txt"
-    if [ -f "$map_file" ]; then
-        mapped_name=$(awk -F'\t' -v file="$rom_file" '$1 == file {print $2}' "$map_file")
-        echo "$mapped_name"
+    local rom_name
+    rom_name=$(basename "$rom_file")
+    local rom_dir
+    rom_dir=$(dirname "$rom_file")
+    local map_file=""
+    if [ -f "$rom_dir/map.txt" ]; then
+        map_file="$rom_dir/map.txt"
+    elif [ -f "$PARENT_DIR/.scraper/bin/map.txt" ]; then
+        map_file="$PARENT_DIR/.scraper/bin/map.txt"
     fi
+    if [ -n "$map_file" ]; then
+        local matches
+        matches=$(grep -i "^${rom_name}[[:space:]]" "$map_file" | awk -F'\t' '{print $2}' | sed '/^\s*$/d' | sort -u | head -n 5)
+        if [ -n "$matches" ]; then
+            echo "$matches" | head -n 1
+            return 0
+        fi
+    fi
+    return 1
 }
+
 
 clean_rom_name() {
     local rom_name="$1"
@@ -159,58 +174,110 @@ find_image_name() {
             search_name=$(clean_rom_name "$rom_file_name")
             ;;
     esac
-    local region match
-    for region in "$REGION_PRIORITY_1" "$REGION_PRIORITY_2" "$REGION_PRIORITY_3" "$REGION_PRIORITY_4"; do
-        if [ -n "$region" ]; then
-            match=$(grep -i "^$search_name.*$region.*\.png$" "$db_file" | head -n 1)
+    if [ "$IMAGE_MODE" = "BOXART" ]; then
+        local region match
+        for region in "$REGION_PRIORITY_1" "$REGION_PRIORITY_2" "$REGION_PRIORITY_3" "$REGION_PRIORITY_4"; do
+            if [ -n "$region" ]; then
+                match=$(grep -i "^$search_name.*$region.*\.png$" "$db_file" | head -n 1)
+                if [ -n "$match" ]; then
+                    echo "$match" | tr -d '\r' | sed 's/[[:space:]]*$//'
+                    return 0
+                fi
+            fi
+        done
+        match=$(grep -i "^$search_name.*\.png$" "$db_file" | head -n 1)
+        if [ -n "$match" ]; then
+            echo "$match" | tr -d '\r' | sed 's/[[:space:]]*$//'
+            return 0
+        fi
+        local fallback1
+        fallback1=$(echo "$search_name" | sed 's/-//g' | sed -E 's/ +/ /g' | sed -E 's/^ +| +$//g')
+        if [ "$fallback1" != "$search_name" ]; then
+            for region in "$REGION_PRIORITY_1" "$REGION_PRIORITY_2" "$REGION_PRIORITY_3" "$REGION_PRIORITY_4"; do
+                if [ -n "$region" ]; then
+                    match=$(grep -i "^$fallback1.*$region.*\.png$" "$db_file" | head -n 1)
+                    if [ -n "$match" ]; then
+                        echo "$match" | tr -d '\r' | sed 's/[[:space:]]*$//'
+                        return 0
+                    fi
+                fi
+            done
+            match=$(grep -i "^$fallback1.*\.png$" "$db_file" | head -n 1)
             if [ -n "$match" ]; then
                 echo "$match" | tr -d '\r' | sed 's/[[:space:]]*$//'
                 return 0
             fi
         fi
-    done
-    match=$(grep -i "^$search_name.*\.png$" "$db_file" | head -n 1)
-    if [ -n "$match" ]; then
-         echo "$match" | tr -d '\r' | sed 's/[[:space:]]*$//'
-         return 0
-    fi
-    local fallback1
-    fallback1=$(echo "$search_name" | sed 's/-//g' | sed -E 's/ +/ /g' | sed -E 's/^ +| +$//g')
-    if [ "$fallback1" != "$search_name" ]; then
-        for region in "$REGION_PRIORITY_1" "$REGION_PRIORITY_2" "$REGION_PRIORITY_3" "$REGION_PRIORITY_4"; do
-            if [ -n "$region" ]; then
-                match=$(grep -i "^$fallback1.*$region.*\.png$" "$db_file" | head -n 1)
-                if [ -n "$match" ]; then
-                    echo "$match" | tr -d '\r' | sed 's/[[:space:]]*$//'
-                    return 0
+        local fallback2
+        fallback2=$(echo "$search_name" | sed 's/-.*//' | sed -E 's/[[:space:]]*$//')
+        if [ "$fallback2" != "$search_name" ]; then
+            for region in "$REGION_PRIORITY_1" "$REGION_PRIORITY_2" "$REGION_PRIORITY_3" "$REGION_PRIORITY_4"; do
+                if [ -n "$region" ]; then
+                    match=$(grep -i "^$fallback2.*$region.*\.png$" "$db_file" | head -n 1)
+                    if [ -n "$match" ]; then
+                        echo "$match" | tr -d '\r' | sed 's/[[:space:]]*$//'
+                        return 0
+                    fi
                 fi
+            done
+            match=$(grep -i "^$fallback2.*\.png$" "$db_file" | head -n 1)
+            if [ -n "$match" ]; then
+                echo "$match" | tr -d '\r' | sed 's/[[:space:]]*$//'
+                return 0
+            fi
+        fi
+        return 1
+    else
+        local matches=""
+        local region
+        for region in "$REGION_PRIORITY_1" "$REGION_PRIORITY_2" "$REGION_PRIORITY_3" "$REGION_PRIORITY_4" ""; do
+            if [ -n "$region" ]; then
+                matches="$matches"$'\n'"$(grep -i "^$search_name.*$region.*\.png$" "$db_file")"
+            else
+                matches="$matches"$'\n'"$(grep -i "^$search_name.*\.png$" "$db_file")"
             fi
         done
-        match=$(grep -i "^$fallback1.*\.png$" "$db_file" | head -n 1)
-        if [ -n "$match" ]; then
-            echo "$match" | tr -d '\r' | sed 's/[[:space:]]*$//'
+        matches=$(echo "$matches" | sed '/^\s*$/d' | sort -u | head -n 5)
+        if [ -n "$matches" ]; then
+            echo "$matches" | head -n 1 | tr -d '\r' | sed 's/[[:space:]]*$//'
             return 0
         fi
-    fi
-    local fallback2
-    fallback2=$(echo "$search_name" | sed 's/-.*//' | sed -E 's/[[:space:]]*$//')
-    if [ "$fallback2" != "$search_name" ]; then
-        for region in "$REGION_PRIORITY_1" "$REGION_PRIORITY_2" "$REGION_PRIORITY_3" "$REGION_PRIORITY_4"; do
-            if [ -n "$region" ]; then
-                match=$(grep -i "^$fallback2.*$region.*\.png$" "$db_file" | head -n 1)
-                if [ -n "$match" ]; then
-                    echo "$match" | tr -d '\r' | sed 's/[[:space:]]*$//'
-                    return 0
+        local fallback1
+        fallback1=$(echo "$search_name" | sed 's/-//g' | sed -E 's/ +/ /g' | sed -E 's/^ +| +$//g')
+        if [ "$fallback1" != "$search_name" ]; then
+            matches=""
+            for region in "$REGION_PRIORITY_1" "$REGION_PRIORITY_2" "$REGION_PRIORITY_3" "$REGION_PRIORITY_4" ""; do
+                if [ -n "$region" ]; then
+                    matches="$matches"$'\n'"$(grep -i "^$fallback1.*$region.*\.png$" "$db_file")"
+                else
+                    matches="$matches"$'\n'"$(grep -i "^$fallback1.*\.png$" "$db_file")"
                 fi
+            done
+            matches=$(echo "$matches" | sed '/^\s*$/d' | sort -u | head -n 5)
+            if [ -n "$matches" ]; then
+                echo "$matches" | head -n 1 | tr -d '\r' | sed 's/[[:space:]]*$//'
+                return 0
             fi
-        done
-        match=$(grep -i "^$fallback2.*\.png$" "$db_file" | head -n 1)
-        if [ -n "$match" ]; then
-            echo "$match" | tr -d '\r' | sed 's/[[:space:]]*$//'
-            return 0
         fi
+        local fallback2
+        fallback2=$(echo "$search_name" | sed 's/-.*//' | sed -E 's/[[:space:]]*$//')
+        if [ "$fallback2" != "$search_name" ]; then
+            matches=""
+            for region in "$REGION_PRIORITY_1" "$REGION_PRIORITY_2" "$REGION_PRIORITY_3" "$REGION_PRIORITY_4" ""; do
+                if [ -n "$region" ]; then
+                    matches="$matches"$'\n'"$(grep -i "^$fallback2.*$region.*\.png$" "$db_file")"
+                else
+                    matches="$matches"$'\n'"$(grep -i "^$fallback2.*\.png$" "$db_file")"
+                fi
+            done
+            matches=$(echo "$matches" | sed '/^\s*$/d' | sort -u | head -n 5)
+            if [ -n "$matches" ]; then
+                echo "$matches" | head -n 1 | tr -d '\r' | sed 's/[[:space:]]*$//'
+                return 0
+            fi
+        fi
+        return 1
     fi
-    return 1
 }
 
 download_github_image() {
@@ -529,25 +596,18 @@ while IFS='|' read -r system_pattern repo_name db_file extensions; do
     if check_global_quit; then
         break
     fi
-    
     [ -z "$system_pattern" ] && continue
-    
     MATCHING_DIR=$(find "$ROMS_DIR" -maxdepth 1 -type d -name "*${system_pattern}*" | while read -r d; do if ! should_exclude_folder "$d"; then echo "$d"; fi; done | head -n 1)
     [ -z "$MATCHING_DIR" ] && continue
-    
     SYSTEM_DIR="$MATCHING_DIR/"
     DB_FILE="$DB_DIR/$db_file"
     EXTENSION_PATTERN=$(echo "$extensions" | sed 's/,/|/g')
-    
     [ ! -f "$DB_FILE" ] && continue
     [ ! -d "$SYSTEM_DIR" ] && continue
-    
     mkdir -p "${SYSTEM_DIR}${OUTPUT_SUFFIX}"
     system_type=$(echo "$system_pattern" | sed 's/[()]//g')
     file_list=$(find "$SYSTEM_DIR" -maxdepth 1 -type f ! -name "._*" | sort)
-    
     clean_system_name=$(basename "$MATCHING_DIR" | sed -E 's/^[0-9]+[)\._ -]+//' | sed 's/ *([^)]*)//g')
-    
     echo "$file_list" | while read -r file; do
         check_for_pause
         [ ! -f "$file" ] && continue
@@ -555,9 +615,7 @@ while IFS='|' read -r system_pattern repo_name db_file extensions; do
         echo "$rom_file_name" | grep -qiE "\.(${EXTENSION_PATTERN})$" || continue
         image_path="${SYSTEM_DIR}${OUTPUT_SUFFIX}/${rom_file_name}.png"
         [ -f "$image_path" ] && continue
-        
         current_system="$system_pattern"
-        
         if download_github_image "$rom_file_name" "$image_path" "$repo_name" "$system_type" "$DB_FILE" || download_gamesdb_image "$rom_file_name" "$image_path"; then
             if [ "${SHOW_IMAGES_WHILE_SCRAPING:-1}" = "1" ]; then
                 "$SDL2IMGSHOW" -S vertical -P center -i "$image_path" -P bottomright -S original -i "$FOOTER_IMAGE" -p bottomcenter -S original -f "$FONT_PATH" -s "$FONT_SIZE" -c "$TEXT_COLOR" -t "${rom_file_name%.*}" -p topcenter -S original -f "$FONT_PATH" -s "$((FONT_SIZE-4))" -c "yellow" -t "Press B to pause" 2>/dev/null &
@@ -570,7 +628,6 @@ while IFS='|' read -r system_pattern repo_name db_file extensions; do
             fi
         fi
     done
-    
     if check_global_quit; then
         break
     fi

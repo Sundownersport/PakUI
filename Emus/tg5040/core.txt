@@ -64,9 +64,6 @@ core3=fbalpha2012_libretro.so
 core4=fbalpha_libretro.so
 core5=km_mame2003_xtreme_amped_libretro.so
 core6=mame2003_plus_libretro.so
-core7=mame2010_libretro.so
-core8=mame2000_libretro.so
-core9=mame_libretro.so
 gameswitcher=ON
 
 # Nintendo Entertainment System (FC)

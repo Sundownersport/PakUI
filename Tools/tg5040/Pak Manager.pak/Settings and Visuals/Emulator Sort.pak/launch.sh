@@ -30,6 +30,15 @@ folder_has_roms() {
    fi
 }
 
+is_ports_folder() {
+   local folder="$1"
+   if [ "$(basename "$folder")" = "PORTS" ] || [ "$folder" = "/mnt/SDCARD/PORTS" ]; then
+       return 0
+   else
+       return 1
+   fi
+}
+
 get_rom_folders() {
    > "$FOLDERS_LIST"
    > "$DISPLAY_LIST"
@@ -40,6 +49,12 @@ get_rom_folders() {
    for folder in "$ROM_DIR"/*; do
        if [ -d "$folder" ] && folder_has_roms "$folder"; then
            folder_name=$(basename "$folder")
+           
+           # Skip PORTS folder completely - don't even include it in the sorting list
+           if [ "$folder_name" = "PORTS" ]; then
+               continue
+           fi
+           
            if echo "$folder_name" | grep -qE "^[0-9]+"; then
                order="$folder_name"
                base=$(echo "$folder_name" | sed -E 's/^[0-9]+[)\._ -]+//')
@@ -111,6 +126,10 @@ rename_emulator() {
    old_base=$(echo "$entry" | cut -d'|' -f2)
    tag=$(echo "$entry" | cut -d'|' -f3)
    folder=$(echo "$entry" | cut -d'|' -f4)
+   
+   if is_ports_folder "$folder"; then
+       return 0
+   fi
    
    new_base=$(./keyboard)
    
@@ -220,6 +239,67 @@ update_paths_in_configs() {
    done
 }
 
+# Function to update special text files in Pak Manager for BitPal, Favorites, etc.
+update_pak_manager_files() {
+   local orig_name="$1"
+   local final_name="$2"
+   local base="$3"
+   local tag="$4"
+   
+   # Check for special folders by their tags
+   if echo "$tag" | grep -q "(BITPAL)"; then
+       for platform_dir in "$BITPAL_DIR"/*; do
+           if [ -d "$platform_dir" ]; then
+               bitpal_txt="$platform_dir/Pak Manager.pak/Gaming/0) BitPal (BITPAL).dual.txt"
+               if [ -f "$bitpal_txt" ]; then
+                   new_txt_name="$platform_dir/Pak Manager.pak/Gaming/$final_name.dual.txt"
+                   mv "$bitpal_txt" "$new_txt_name"
+               fi
+           fi
+       done
+   elif echo "$base" | grep -q "Favorites"; then
+       for platform_dir in "$BITPAL_DIR"/*; do
+           if [ -d "$platform_dir" ]; then
+               favorites_txt="$platform_dir/Pak Manager.pak/Gaming/0) Favorites (CUSTOM).dual.txt"
+               if [ -f "$favorites_txt" ]; then
+                   new_txt_name="$platform_dir/Pak Manager.pak/Gaming/$final_name.dual.txt"
+                   mv "$favorites_txt" "$new_txt_name"
+               fi
+           fi
+       done
+   elif echo "$tag" | grep -q "(GS)"; then
+       for platform_dir in "$BITPAL_DIR"/*; do
+           if [ -d "$platform_dir" ]; then
+               gs_txt="$platform_dir/Pak Manager.pak/Gaming/0) Game Switcher (GS).dual.txt"
+               if [ -f "$gs_txt" ]; then
+                   new_txt_name="$platform_dir/Pak Manager.pak/Gaming/$final_name.dual.txt"
+                   mv "$gs_txt" "$new_txt_name"
+               fi
+           fi
+       done
+   elif echo "$tag" | grep -q "(RND)"; then
+       for platform_dir in "$BITPAL_DIR"/*; do
+           if [ -d "$platform_dir" ]; then
+               rnd_txt="$platform_dir/Pak Manager.pak/Gaming/0) Random Game (RND).dual.txt"
+               if [ -f "$rnd_txt" ]; then
+                   new_txt_name="$platform_dir/Pak Manager.pak/Gaming/$final_name.dual.txt"
+                   mv "$rnd_txt" "$new_txt_name"
+               fi
+           fi
+       done
+   elif echo "$base" | grep -q "KID"; then
+       for platform_dir in "$BITPAL_DIR"/*; do
+           if [ -d "$platform_dir" ]; then
+               kid_txt="$platform_dir/Pak Manager.pak/Gaming/0) KID (CUSTOM).dual.txt"
+               if [ -f "$kid_txt" ]; then
+                   new_txt_name="$platform_dir/Pak Manager.pak/Gaming/$final_name.dual.txt"
+                   mv "$kid_txt" "$new_txt_name"
+               fi
+           fi
+       done
+   fi
+}
+
 apply_sort_order() {
    > "/tmp/folder_sort_result.txt"
    
@@ -230,7 +310,9 @@ apply_sort_order() {
    counter=0
    
    while IFS='|' read -r order base tag folder; do
-       if [ "$remove_sort_mode" = "true" ]; then
+       if is_ports_folder "$folder"; then
+           final_name="PORTS"
+       elif [ "$remove_sort_mode" = "true" ]; then
            final_name="${base}${tag}"
        else
            prefix=$(printf "%02d" $counter)
@@ -241,21 +323,23 @@ apply_sort_order() {
        temp_path="$ROM_DIR/temp_${final_name}"
        orig_name=$(basename "$folder")
        
-       echo "$orig_name|$final_name|$folder|$temp_path|$final_path" >> "$mapping_file"
+       echo "$orig_name|$final_name|$folder|$temp_path|$final_path|$base|$tag" >> "$mapping_file"
        counter=$((counter + 1))
    done < "$REORDER_LIST"
    
-   while IFS='|' read -r orig_name final_name folder temp_path final_path; do
+   while IFS='|' read -r orig_name final_name folder temp_path final_path base tag; do
        update_paths_in_configs "$orig_name" "$final_name"
+       # Update special text files in Pak Manager
+       update_pak_manager_files "$orig_name" "$final_name" "$base" "$tag"
    done < "$mapping_file"
    
-   while IFS='|' read -r orig_name final_name folder temp_path final_path; do
+   while IFS='|' read -r orig_name final_name folder temp_path final_path base tag; do
        if [ -d "$folder" ]; then
            mv "$folder" "$temp_path"
        fi
    done < "$mapping_file"
    
-   while IFS='|' read -r orig_name final_name folder temp_path final_path; do
+   while IFS='|' read -r orig_name final_name folder temp_path final_path base tag; do
        if [ -d "$temp_path" ]; then
            mv "$temp_path" "$final_path"
            
@@ -281,11 +365,19 @@ apply_sort_order() {
                    else
                        tag=""
                    fi
-                   final_name="${base}${tag}"
+                   
+                   if [ "$base" = "PORTS" ]; then
+                       final_name="PORTS"
+                   else
+                       final_name="${base}${tag}"
+                   fi
+                   
                    final_path="$ROM_DIR/$final_name"
                    temp_path="$ROM_DIR/temp_${final_name}"
                    
                    update_paths_in_configs "$folder_name" "$final_name"
+                   # Update special text files in Pak Manager
+                   update_pak_manager_files "$folder_name" "$final_name" "$base" "$tag"
                    
                    mv "$folder" "$temp_path"
                    mv "$temp_path" "$final_path"
